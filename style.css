@@ -1,0 +1,230 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('http://fonts.cdnfonts.com/css/mv-boli');                
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: auto;
+}
+.top-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #658265;
+    padding:0.4%;
+}
+.email{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+p{
+    color: white;
+}
+.social-media{
+    width: 4%;
+    display: flex;
+    padding-right: 5%;
+    justify-content: space-around;
+}
+@media (max-width:991px) {
+    .social-media{
+        width: 7%;
+    }
+}
+@media (max-width:554px) {
+    .social-media{
+        width: 9%;
+    }
+    p{
+        font-size: 12px;
+    }
+}
+@media (max-width:333px) {
+    p{
+        font-size: 10px;
+    }
+    .envelope{
+        width: 15px;
+        height: 7px;
+    }
+    .facebook , .instagram{
+        width: 10px;
+        height: 10px;
+    }
+}
+.navbar{
+    width: 100%;
+    height: auto;
+    position: relative;
+    line-height: 60px;
+    font-size: 18px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.links {
+    width: 64%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+.navbar-toggler{
+    display:none;
+}
+
+@media (max-width: 767px) {
+    .navbar{
+        display: block;
+        margin: 0 auto;
+    }
+    .links{
+        width:100%;
+        display:block;
+        text-align: center;
+    }
+    .navbar ul {
+        width: 100%;
+        background-color: transparent;
+        height: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+    }
+    .navbar ul.open {
+        max-height: 100vh;
+    }
+    .navbar ul li {
+        width: 100%;
+    }
+    .navbar .navbar-toggler {
+        display: block;
+        position: absolute;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0 5px;
+        cursor: pointer;
+    }
+    .navbar .navbar-toggler span,
+    .navbar .navbar-toggler span::before,
+    .navbar .navbar-toggler span::after {
+        display: block;
+        content: '';
+        background-color: rgb(0, 0, 0);
+        height: 3px;
+        width: 24px;
+        border-radius: 4px;
+        transition: all ease-in-out 0.3s;
+    }
+    .navbar .navbar-toggler span::before {
+        transform: translateY(-8px);
+    }
+    .navbar .navbar-toggler span::after {
+        transform: translateY(5px);
+    }
+    .navbar .navbar-toggler.open-navbar-toggler span {
+        background-color: transparent;
+    }
+    .navbar .navbar-toggler.open-navbar-toggler span::before {
+        transform: translateY(0px) rotate(45deg);
+    }
+    .navbar .navbar-toggler.open-navbar-toggler span::after {
+    transform: translateY(-3px) rotate(-45deg);
+    }
+}
+
+/* INTRODUCTION SECTION */
+.introduction{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #9EB09E;
+    padding-top:8%;
+    padding-bottom:6%;
+}
+.my-name{
+    font-family: 'MV Boli', sans-serif;
+    font-size: 35px;
+}
+.my-name h1{
+    text-align: center;
+}
+.my-occupation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.my-occupation p{
+    color: #838482;
+    font-size: 16px;
+}
+@media (max-width:767px) {
+    .my-name{
+        font-size: 30px;
+    }
+}
+@media (max-width:620px) {
+    .my-name{
+        font-size: 25px;
+    }
+}
+@media (max-width:432px) {
+    .my-name{
+        font-size: 20px;
+    }
+    .my-occupation p {
+        font-size: 13px;
+    }
+    .introduction{
+        padding-top: 15%;
+    }
+}
+@media (max-width:245px) {
+    .my-name{
+        font-size: 16px;
+    }
+    .my-occupation p {
+        font-size: 10px;
+    }
+    .introduction{
+        padding-top: 20%;
+    }
+}
+
+/* About me Section */
+.about-paragraph{
+    color: black;
+    width: 50%;
+} 
+.about-me{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.column.card {
+    display: flex;
+    justify-content: center;
+}
+
+/* .design{
+    border: 2px solid #658265;
+    border-radius: 50%;
+    width: 25px;
+} */

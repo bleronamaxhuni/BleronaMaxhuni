@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blerona's Personal Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/e1659de1de.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div class="email">
+                <p><img class="envelope" src="./icons/envelope-solid.png" alt=""> bleronamaxhunni@gmail.com</p>
+            </div>
+            <div class="social-media">
+                <a href="www.facebook.com"><img class="facebook" src="./icons/facebook-brands.png" alt=""></a>
+                <a href="www.instagram.com"><img class="instagram" src="./icons/instagram-brands.png" alt=""></a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="links">
+                <li><a href="#html">HOME</a></li>
+                <li><a href="#css">PROJECTS</a></li>
+                <li><a href="#javascript">CONTACT ME</a></li>
+            </ul>
+            <button class="navbar-toggler">
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section>
+        <div class="introduction container">
+            <div class="my-name"><h1>Blerona Maxhuni</h1></div>
+            <br>
+            <div class="my-occupation">
+                <p class="now">Junior Front-End Developer</p>
+                <p class="wanna-be">PHP | MYSQL Intern</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="about-me container">
+            <div class="column img" width="30%">
+                <img src="./img/Repeat Grid 8.png" alt="">
+            </div>
+            <div class="cloumn card" width="30%">
+                <div class="title-card">
+                    <h4>About me</h4>
+                </div>
+                <div class="paragraph">
+                    
+                    <p class="about-paragraph"><span class="design"></span>I am an undergraduate student at the University of Business and Technology
+                        (UBT),
+                        studying Computer Science and Engineering (CSE).I completed some courses such
+                        as HTML5, CSS including Bootstrap and SCSS, basic Javascript. I have experience
+                        with Java, SQL, Algorithms and data structures. I’m also familiar with Adobe XD and
+                        Photoshop. I am interested in expanding my knowledge much more and this training
+                        is what I need. I made a few small and simple websites to improve my coding skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+
+    <!-- Responsive Navbar -->
+    <script>
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const navbarMenu = document.querySelector(".navbar ul");
+        const navbarLinks = document.querySelectorAll(".navbar a");
+
+        navbarToggler.addEventListener("click", navbarTogglerClick);
+
+        function navbarTogglerClick() {
+            navbarToggler.classList.toggle("open-navbar-toggler");
+            navbarMenu.classList.toggle("open");
+        }
+
+        navbarLinks.forEach(elem => elem.addEventListener("click", navbarLinkClick));
+
+        function navbarLinkClick() {
+            if (navbarMenu.classList.contains("open")) {
+                navbarToggler.click();
+            }
+        }
+    </script>
+</body>
+</html>
