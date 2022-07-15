@@ -15,7 +15,8 @@ header{
     flex-direction: row;
     justify-content: space-between;
     background-color: #658265;
-    padding:0.4%;
+    padding-top:0.4%;
+    padding-bottom:0.4%;
 }
 .email{
     width: 50%;
@@ -208,23 +209,25 @@ li a{
 }
 
 /* About me Section */
-.about-paragraph{
-    color: black;
-    width: 50%;
-} 
 .about-me{
     width: 100%;
     display: flex;
     margin: 0 auto;
     align-items: center;
 }
+.title-card{
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
 .column.card {
     display: flex;
     justify-content: center;
 }
+.about-paragraph{
+    color: black;
+    width: 70%;
+    font-size: 20px;
+} 
 
-/* .design{
-    border: 2px solid #658265;
-    border-radius: 50%;
-    width: 25px;
-} */
+/* SKILLS BAR */
