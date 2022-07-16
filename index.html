@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
         crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/e1659de1de.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <div class="top-header">
@@ -37,7 +39,9 @@
 
     <section>
         <div class="introduction container" id="home">
-            <div class="my-name"><h1>Blerona Maxhuni</h1></div>
+            <div class="my-name">
+                <h1>Blerona Maxhuni</h1>
+            </div>
             <br>
             <div class="my-occupation">
                 <p class="now">Junior Front-End Developer</p>
@@ -58,8 +62,9 @@
                     <br>
                 </div>
                 <div class="paragraph">
-                    
-                    <p class="about-paragraph">I am an undergraduate student at the University of Business and Technology
+
+                    <p class="about-paragraph">I am an undergraduate student at the University of Business and
+                        Technology
                         (UBT),
                         studying Computer Science and Engineering (CSE).I completed some courses such
                         as HTML5, CSS including Bootstrap and SCSS, basic Javascript. I have experience
@@ -117,13 +122,14 @@
             </div>
             <div class="my-github">
                 <div class="git-tittle">
-                    <h2>My GitHub Account</h2></div>
-                    <a href="https://github.com/bleronamaxhuni" class="git-link">bleronamaxhuni - GitHub</a>
+                    <h2>My GitHub Account</h2>
+                </div>
+                <a href="https://github.com/bleronamaxhuni" class="git-link">bleronamaxhuni - GitHub</a>
             </div>
         </div>
     </section>
 
-    <section class="projects-box">
+    <section class="projects-box" id="projects">
         <h2 class="project-tittle">Check My Projects</h2>
         <br>
         <hr>
@@ -156,15 +162,54 @@
             </div>
         </div>
         <div class="showBtn">
-        <button onclick="toggleText()" id="myBtn">Show More</button>
-    </div>
+            <button onclick="toggleText()" id="myBtn">Show More</button>
+        </div>
     </section>
 
-    <footer></footer>
+    <section id="contact">
+        <div class="contact">
+            <div class="contact-title">
+                <h2>Contact Me</h2>
+                <br>
+                <hr class="hr">
+            </div>
+            <br>
+            <div class="contact-form">
+                <div class="input-class">
+                    <input type="text" class="input" placeholder="Your Name" required>
+                    <input type="email" class="input" placeholder="Your E-mail" required>
+                    <input type="tel" class="input" placeholder="Phone" required>
+                </div>
+                <div class="message">
+                    <textarea placeholder="Message" cols="30" rows="10"></textarea>
+                    <button class="btn send" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    
+    <footer>
+        <div class="socials">
+            <div class="title-social">
+                <h3>My Social Media</h3>
+            </div>
+            <div class="socials-icons">
+                <a href="www.facebook.com"><img class="facebook" src="./icons/facebook-brands.png" alt=""></a>
+                <a href="www.instagram.com"><img class="instagram" src="./icons/instagram-brands.png" alt=""></a>
+            </div>
+            <div class="my-email">
+                <p><img class="envelope" src="./icons/envelope-solid.png" alt=""> bleronamaxhunni@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p class="paragraph-copy">BleronaMaxhuni@2022</p>
+        </div>
+    </footer>
+
+
     <script>
-    //  Responsive Navbar 
+        //  Responsive Navbar 
         const navbarToggler = document.querySelector(".navbar-toggler");
         const navbarMenu = document.querySelector(".navbar ul");
         const navbarLinks = document.querySelectorAll(".navbar a");
@@ -183,19 +228,20 @@
                 navbarToggler.click();
             }
         }
-    // SHOW MORE / LESS BUTTON
+        // SHOW MORE / LESS BUTTON
         function toggleText() {
-        var x = document.getElementById("show-more");
-        var y = document.getElementById("myBtn")
-        if (x.style.display === "none") {
-            x.style.display = "flex";
-            y.innerHTML = "Show Less";
+            var x = document.getElementById("show-more");
+            var y = document.getElementById("myBtn")
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+                y.innerHTML = "Show Less";
 
-        } else {
-            x.style.display = "none";
-            y.innerHTML = "Show More";
+            } else {
+                x.style.display = "none";
+                y.innerHTML = "Show More";
+            }
         }
-    }
     </script>
 </body>
+
 </html>

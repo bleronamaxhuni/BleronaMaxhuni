@@ -429,3 +429,112 @@ hr{
     background-color: #9EB09E;
     color: #000000;
 }
+
+/* CONTACT FORM */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.contact{
+    top: 50%;
+    transform: translateY(10%);
+    width: 100%;
+    padding: 20px 0px;
+    margin-bottom: 5%;
+}
+.contact-form{
+    max-width: 70%;
+    height: 350px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 84%);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.input-class{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+.input-class, .message{
+    width: 45%;
+    justify-content: space-between;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.input-class .input, .message textarea{
+    margin: 10px 0;
+    background: #9EB09E;
+    border: 0;
+    border: 1px solid transparent;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+.message textarea{
+    height: 200px;
+}
+
+::-webkit-input-placeholder{
+    color: black;
+}
+::-moz-input-placeholder{
+    color: black;
+}
+.btn.send{
+    background: #9EB09E;
+    text-align: center;
+    padding: 15px;
+    border-radius:  5px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+.btn.send:hover{
+    background-color: black;
+    color: #9EB09E;
+}
+@media screen and (max-width: 808px){
+    .contact-fome{
+        flex-direction: column;
+    }
+    .message textarea{
+        height: 70px;
+    }
+    .input-class, .msg{
+        width: 100%;
+    }
+    .btn.send{
+        margin-bottom: 0;
+    }
+}
+.hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
+
+}
+.contact-title{
+    text-align: center;
+}
+.socials{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+.title-social{
+    color: white;
+}
+.copyright{
+    background-color: #658265;
+    text-align: center;
+    font-family: 'MV Boli', sans-serif;
+}
