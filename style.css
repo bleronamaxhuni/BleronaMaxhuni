@@ -371,3 +371,61 @@ li a{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
+
+/* Projects */
+.projects-box{
+    background-color: #98a798;
+    padding: 1%;
+}
+.project-box, .my-projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.project-card {
+    border: 1px solid transparent;
+    background-color: #658265;
+    padding-bottom: 1%;
+    margin: 2%;
+}
+.card-link{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+a.checkBtn{
+    text-decoration: none;
+    background-color: black;
+    color: #9EB09E;
+    padding: 1% 5% 1% 5%;
+    border-radius: 10px;
+}
+a.checkBtn:hover{
+    background-color: #9EB09E;
+    color: #000000;
+}
+.project-tittle{
+    text-align: center;
+}
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #6F886F, rgba(0, 0, 0, 0));
+}
+.showBtn{
+    text-align: center;
+    background-color: transparent;
+}
+#myBtn{
+    background-color: black;
+    color: #9EB09E;
+    padding: 0.5% 4% 0.5% 4%;
+    border-radius:10px ;
+}
+#myBtn:hover{
+    background-color: #9EB09E;
+    color: #000000;
+}

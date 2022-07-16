@@ -122,12 +122,49 @@
             </div>
         </div>
     </section>
-    
+
+    <section class="projects-box">
+        <h2 class="project-tittle">Check My Projects</h2>
+        <br>
+        <hr>
+        <div class="my-projects">
+            <div class="project-card" style="width: 35%">
+                <img class="card-img-top" src="./img/Screenshot (149).png" style="width: 100%;">
+                <div class="card-link">
+                    <a href="https://zkm.netlify.app/" class="checkBtn">Get a better look</a>
+                </div>
+            </div>
+            <div class="project-card" style="width: 35%">
+                <img class="card-img-top" src="./img/Screenshot (151).png" style="width: 100%;">
+                <div class="card-link">
+                    <a href="https://autosaloon.netlify.app/" class="checkBtn">Get a better look</a>
+                </div>
+            </div>
+        </div>
+        <div class="my-projects" id="show-more" style="display: none;">
+            <div class="project-card" id="show-more" style="width: 35%">
+                <img class="card-img-top" src="./img/Screenshot (152).png" style="width: 100%;">
+                <div class="card-link">
+                    <a href="https://errorsoftware.netlify.app/" class="checkBtn">Get a better look</a>
+                </div>
+            </div>
+            <div class="project-card" id="show-more" style="width: 35%">
+                <img class="card-img-top" src="./img/Screenshot (153).png" style="width: 100%;">
+                <div class="card-link">
+                    <a href="https://our-company.netlify.app/" class="checkBtn">Get a better look</a>
+                </div>
+            </div>
+        </div>
+        <div class="showBtn">
+        <button onclick="toggleText()" id="myBtn">Show More</button>
+    </div>
+    </section>
 
     <footer></footer>
 
-    <!-- Responsive Navbar -->
+    
     <script>
+    //  Responsive Navbar 
         const navbarToggler = document.querySelector(".navbar-toggler");
         const navbarMenu = document.querySelector(".navbar ul");
         const navbarLinks = document.querySelectorAll(".navbar a");
@@ -146,6 +183,19 @@
                 navbarToggler.click();
             }
         }
+    // SHOW MORE / LESS BUTTON
+        function toggleText() {
+        var x = document.getElementById("show-more");
+        var y = document.getElementById("myBtn")
+        if (x.style.display === "none") {
+            x.style.display = "flex";
+            y.innerHTML = "Show Less";
+
+        } else {
+            x.style.display = "none";
+            y.innerHTML = "Show More";
+        }
+    }
     </script>
 </body>
 </html>
