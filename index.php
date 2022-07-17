@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','contact_db') or die('connection failed');
+    $conn = mysqli_connect('localhost','root','','contact_db') or die('connection failed');
 
     if(isset($_POST['send'])){
 
@@ -20,6 +20,7 @@ $conn = mysqli_connect('localhost','root','','contact_db') or die('connection fa
     }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,8 +57,8 @@ $conn = mysqli_connect('localhost','root','','contact_db') or die('connection fa
                 <p><img class="envelope" src="./icons/envelope-solid.png" alt=""> bleronamaxhunni@gmail.com</p>
             </div>
             <div class="social-media">
-                <a href="www.facebook.com"><img class="facebook" src="./icons/facebook-brands.png" alt=""></a>
-                <a href="www.instagram.com"><img class="instagram" src="./icons/instagram-brands.png" alt=""></a>
+                <a href="https://www.facebook.com/blerona.maxhuni.58/"><img class="facebook" src="./icons/facebook-brands.png" alt=""></a>
+                <a href="https://www.instagram.com/bleronamaxhunni/"><img class="instagram" src="./icons/instagram-brands.png" alt=""></a>
             </div>
         </div>
         <nav class="navbar">
@@ -86,29 +87,14 @@ $conn = mysqli_connect('localhost','root','','contact_db') or die('connection fa
         </div>
     </section>
 
-    <section>
-        <div class="about-me container" id="about">
-            <div class="column img" width="30%">
-                <img src="./img/Repeat Grid 8.png" alt="">
-            </div>
-            <div class="cloumn card" width="40%">
-                <div class="title-card">
-                    <h4>About me</h4>
-                    <br>
-                    <br>
-                </div>
-                <div class="paragraph">
 
-                    <p class="about-paragraph">I am an undergraduate student at the University of Business and
-                        Technology
-                        (UBT),
-                        studying Computer Science and Engineering (CSE).I completed some courses such
-                        as HTML5, CSS including Bootstrap and SCSS, basic Javascript. I have experience
-                        with Java, SQL, Algorithms and data structures. I’m also familiar with Adobe XD and
-                        Photoshop. I am interested in expanding my knowledge much more and this training
-                        is what I need. I made a few small and simple websites to improve my coding skills.</p>
-                </div>
+    <section>
+        <div class="about-me">
+            <div class="programming-language-img">
             </div>
+            <h2 class="a-tittle">About Me</h2>
+            <p class="about-paragraph">I am an undergraduate student at the University of Business and Technology (UBT), studying Computer Science and Engineering (CSE).I completed some courses such as HTML5, CSS including Bootstrap and SCSS, basic Javascript. I have experience with Java, SQL, Algorithms and data structures. I’m also familiar with Adobe XD and Photoshop. I am interested in expanding my knowledge much more and this training is what I need. I made a few small and simple websites to improve my coding skills.
+            </p>
         </div>
     </section>
 
@@ -170,13 +156,13 @@ $conn = mysqli_connect('localhost','root','','contact_db') or die('connection fa
         <br>
         <hr>
         <div class="my-projects">
-            <div class="project-card" style="width: 35%">
+            <div class="project-card">
                 <img class="card-img-top" src="./img/Screenshot (149).png" style="width: 100%;">
                 <div class="card-link">
                     <a href="https://zkm.netlify.app/" class="checkBtn">Get a better look</a>
                 </div>
             </div>
-            <div class="project-card" style="width: 35%">
+            <div class="project-card">
                 <img class="card-img-top" src="./img/Screenshot (151).png" style="width: 100%;">
                 <div class="card-link">
                     <a href="https://autosaloon.netlify.app/" class="checkBtn">Get a better look</a>
@@ -184,13 +170,13 @@ $conn = mysqli_connect('localhost','root','','contact_db') or die('connection fa
             </div>
         </div>
         <div class="my-projects" id="show-more" style="display: none;">
-            <div class="project-card" id="show-more" style="width: 35%">
+            <div class="project-card" id="show-more">
                 <img class="card-img-top" src="./img/Screenshot (152).png" style="width: 100%;">
                 <div class="card-link">
                     <a href="https://errorsoftware.netlify.app/" class="checkBtn">Get a better look</a>
                 </div>
             </div>
-            <div class="project-card" id="show-more" style="width: 35%">
+            <div class="project-card" id="show-more">
                 <img class="card-img-top" src="./img/Screenshot (153).png" style="width: 100%;">
                 <div class="card-link">
                     <a href="https://our-company.netlify.app/" class="checkBtn">Get a better look</a>
@@ -228,10 +214,13 @@ $conn = mysqli_connect('localhost','root','','contact_db') or die('connection fa
         <div class="socials">
             <div class="title-social">
                 <h3>My Social Media</h3>
-            </div>
-            <div class="socials-icons">
-                <a href="www.facebook.com"><img class="facebook" src="./icons/facebook-brands.png" alt=""></a>
-                <a href="www.instagram.com"><img class="instagram" src="./icons/instagram-brands.png" alt=""></a>
+                &nbsp; 
+                &nbsp; 
+                &nbsp; 
+                <div class="socials-icons">
+                    <a href="https://www.facebook.com/blerona.maxhuni.58/"><img class="facebook" src="./icons/facebook-brands.png" alt=""></a>
+                    <a href="https://www.instagram.com/bleronamaxhunni/"><img class="instagram" src="./icons/instagram-brands.png" alt=""></a>
+                </div>
             </div>
             <div class="my-email">
                 <p><img class="envelope" src="./icons/envelope-solid.png" alt=""> bleronamaxhunni@gmail.com</p>

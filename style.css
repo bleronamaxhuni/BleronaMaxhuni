@@ -209,26 +209,58 @@ li a{
 }
 
 /* About me Section */
-.about-me{
-    width: 100%;
-    display: flex;
+.about-me {
+    width: 70%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 80px;
     margin: 0 auto;
-    align-items: center;
 }
-.title-card{
-    font-size: 22px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-}
-.column.card {
-    display: flex;
-    justify-content: center;
-}
-.about-paragraph{
-    color: black;
-    width: 85%;
+.programming-language-img {
+    width: 300px;
+    height: 200px;
+    background: url('./img/Repeat\ Grid\ 8.png');
+    background-size: cover;
+    border-radius: 50%;
+    float: left;
+    margin: 50px 30px 30px 0px;  
+}  
+.about-tittle {
+    margin-bottom: 15px;
+    font-weight: 400;
     font-size: 20px;
-} 
+    color: rgb(14, 14, 14);
+}  
+.about-paragraph {
+    color: rgb(108, 106, 106);
+    font-weight: 300;
+    line-height: 45px;
+}
+@media(max-width:531px){
+    .about-me{
+        padding: 0;
+    }
+    .about-paragraph{
+        line-height: 30px;
+    }
+}
+@media(max-width:404px){
+    .about-paragraph{
+        line-height: 25px;
+    }
+    .programming-language-img{
+        float: right;
+        margin: 0 auto;
+    }
+}
+@media(max-width:334px){
+    .about-paragraph{
+        line-height: 20px;
+    }
+    .programming-language-img{
+        display: none;
+    }
+}
 
 /* SKILLS BAR */
 .my-skills {
@@ -341,15 +373,34 @@ li a{
 .progress-line .php::after {
     content: "5%";
 }
-@media (max-width: 700px) {
+@media (max-width: 1170px) {
+    .skills{
+        width: 60%;
+    }
+    .skills-bar .bar .progress-line{
+        width: 80%;
+    }
+} 
+@media (max-width:732px) {
+    .my-skills{
+        flex-direction: column;
+    }
     .skills{
         width: 80%;
     }
-
     .skills-bar .bar .progress-line{
         width: 100%;
     }
 }
+@media (max-width:400px) {
+    .skills{
+        width: 100%;
+    }
+    .skills-bar .bar .progress-line{
+        width: 100%;
+    }
+}
+
 .my-github {
     width: 40%;
     height: 200px;
@@ -371,6 +422,20 @@ li a{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
+@media (max-width:732px) {
+    .my-github{
+        width: 70%;
+    }
+}
+@media (max-width:400px) {
+    .my-github{
+        width: 100%;
+    }
+    .git-tittle{
+        font-size: 13px;
+    }
+}
+
 
 /* Projects */
 .projects-box{
@@ -390,6 +455,7 @@ li a{
     background-color: #658265;
     padding-bottom: 1%;
     margin: 2%;
+    width: 35%;
 }
 .card-link{
     display: flex;
@@ -409,6 +475,7 @@ a.checkBtn:hover{
 }
 .project-tittle{
     text-align: center;
+    font-size: 25px;
 }
 hr{
     border: 0;
@@ -430,52 +497,37 @@ hr{
     color: #000000;
 }
 
+@media(max-width:1016px){
+    .card-link{
+        font-size: 14px
+    }
+    .project-box, .my-projects{
+        width: 100%;
+    }
+    .project-card{
+        width: 40%
+    }
+}
+@media(max-width:850px){
+    .project-tittle{
+        font-size: 20px;
+    }
+}
+@media(max-width:554px){
+    .card-link{
+        font-size: 10px
+    }
+    #myBtn{
+        font-size: 10px
+    }
+    h2.project-tittle{
+        font-size: 15px
+    }
+}
+
 /* CONTACT FORM */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-/* .contact{
-    top: 50%;
-    transform: translateY(10%);
-    width: 100%;
-    padding: 20px 0px;
-    margin-bottom: 5%;
-}
-.contact-form{
-    max-width: 70%;
-    height: 350px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 84%);
-    padding: 30px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-}
-.input-class{
-    display: flex;
-    flex-direction: column;
-    margin-right: 4%;
-}
-.input-class, .my-message{
-    width: 45%;
-    justify-content: space-between;
-}
-.my-message{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.input-class .input, .my-message textarea{
-    margin: 10px 0;
-    background: #9EB09E;
-    border: 0;
-    border: 1px solid transparent;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-}
-.my-message textarea{
-    height: 200px;
-} */
 .contact{
     padding: 2%;
 }
@@ -559,9 +611,20 @@ input , textarea{
     background-color: black;
     color: #9EB09E;
 }
+@media(max-width:850px){
+    .contact-tittle span{
+        font-size: 20px;
+    }
+}
+@media(max-width:554px){
+    .contact-tittle span{
+        font-size: 15px;
+    }
+}
 @media screen and (max-width: 808px){
-    .contact-fome{
+    .contact form .flex{
         flex-direction: column;
+        align-items: center;
     }
     .my-message textarea{
         height: 70px;
@@ -569,8 +632,18 @@ input , textarea{
     .input-class, .msg{
         width: 100%;
     }
-    .btn.send{
+    .btnSend{
         margin-bottom: 0;
+        width: 80%;
+    }
+    .contact form .flex .box{
+        width: 100%;
+    }
+    .flex .input{
+        width: 80%;
+    }
+    .my-message{
+        width: 82%;
     }
 }
 
@@ -585,11 +658,15 @@ input , textarea{
     background-color: black;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 1%;
+    justify-content: space-around;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
 }
 .title-social{
     color: white;
+    display: flex;
+    align-items: center;
 }
 .copyright{
     background-color: #658265;
@@ -613,4 +690,21 @@ input , textarea{
 }
 .message i{
     cursor: pointer;
+}
+@media(max-width:808px){
+    .title-social{
+        font-size: 15px;
+    }
+}
+@media(max-width:554px){
+    .title-social{
+        font-size: 10px;
+    }
+}
+@media (max-width:404px) {
+    .socials{
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
