@@ -433,7 +433,7 @@ hr{
 /* CONTACT FORM */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-.contact{
+/* .contact{
     top: 50%;
     transform: translateY(10%);
     width: 100%;
@@ -455,16 +455,16 @@ hr{
     flex-direction: column;
     margin-right: 4%;
 }
-.input-class, .message{
+.input-class, .my-message{
     width: 45%;
     justify-content: space-between;
 }
-.message{
+.my-message{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.input-class .input, .message textarea{
+.input-class .input, .my-message textarea{
     margin: 10px 0;
     background: #9EB09E;
     border: 0;
@@ -473,8 +473,67 @@ hr{
     width: 100%;
     border-radius: 5px;
 }
-.message textarea{
+.my-message textarea{
     height: 200px;
+} */
+.contact{
+    padding: 2%;
+}
+.contact form{
+    max-width: 80%;
+    margin:0 auto;
+    background-color: rgba(0, 0, 0, 84%);
+    padding: 2%;
+    border-radius: 20px;
+}
+.contact form .box{
+    width: 100%;
+    padding:0.5rem;
+    font-size: 15px;
+    text-transform: none;
+    margin:10px 0;
+}
+
+.contact form textarea{
+    height: 50%;
+    resize: none;
+}
+
+.contact form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.flex .input{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+input , textarea{
+    background-color: #9EB09E;
+    border-radius: 20px;
+    border: none;
+}
+.my-message {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact form .flex .box{
+    width: 70%;
+}
+.contact-tittle{
+    text-align: center;
+}
+
+.contact-tittle span{
+    text-transform: uppercase;
+    font-size: 25px;
+    border-bottom: var(--border-bold);
 }
 
 ::-webkit-input-placeholder{
@@ -483,20 +542,20 @@ hr{
 ::-moz-input-placeholder{
     color: black;
 }
-.btn.send{
+.btnSend{
     background: #9EB09E;
     text-align: center;
     padding: 15px;
-    border-radius:  5px;
+    border-radius:  15px;
     color: rgb(0, 0, 0);
     cursor: pointer;
     text-transform: uppercase;
     display: block;
-    width: 100%;
+    width: 20%;
     height: 40px;
-    margin-bottom: 8px;
+    margin: 60px 0px 10px 0px;
 }
-.btn.send:hover{
+.btnSend:hover{
     background-color: black;
     color: #9EB09E;
 }
@@ -504,7 +563,7 @@ hr{
     .contact-fome{
         flex-direction: column;
     }
-    .message textarea{
+    .my-message textarea{
         height: 70px;
     }
     .input-class, .msg{
@@ -514,15 +573,14 @@ hr{
         margin-bottom: 0;
     }
 }
+
 .hr{
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
 
 }
-.contact-title{
-    text-align: center;
-}
+
 .socials{
     background-color: black;
     display: flex;
@@ -537,4 +595,22 @@ hr{
     background-color: #658265;
     text-align: center;
     font-family: 'MV Boli', sans-serif;
+}
+
+.message{
+    position: sticky;
+    top: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 20px;
+    background-color: #000000;
+    border-radius: 20px;
+    color: #658265;
+}
+.message i{
+    cursor: pointer;
 }

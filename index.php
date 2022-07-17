@@ -1,3 +1,25 @@
+<?php
+
+$conn = mysqli_connect('localhost','root','','contact_db') or die('connection failed');
+
+    if(isset($_POST['send'])){
+
+        $name = mysqli_real_escape_string($conn, $_POST['name']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $number = mysqli_real_escape_string($conn, $_POST['number']);
+        $msg = mysqli_real_escape_string($conn, $_POST['message']);
+
+        $select_message = mysqli_query($conn, "SELECT * FROM `contact_form` WHERE name = '$name' AND email = '$email' AND number = '$number' AND message = '$msg'") or die('query failed');
+        
+        if(mysqli_num_rows($select_message) > 0){
+            $message[] = 'message sent already!';
+        }else{
+            mysqli_query($conn, "INSERT INTO `contact_form`(name, email , number, message) VALUES('$name', '$email', '$number', '$msg')") or die('query failed');
+            $message[] = 'message sent successfully!';
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +36,20 @@
 </head>
 
 <body>
+<?php
+
+    if(isset($message)){
+        foreach($message as $message){
+            echo '
+            <div class="message">
+                <span>'.$message.'</span>
+                <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+            </div>
+            ';
+        }
+    }
+    ?>
+
     <header>
         <div class="top-header">
             <div class="email">
@@ -166,27 +202,27 @@
         </div>
     </section>
 
-    <section id="contact">
-        <div class="contact">
-            <div class="contact-title">
-                <h2>Contact Me</h2>
+    <section class="contact" id="contact">
+        <h1 class="contact-tittle" data-aos="fade-up"> <span>Contact Me</span> </h1>
+        <br>
+        <hr class="hr">
+        <br>
+        <form action="" method="post">
+            <div class="flex">
+                <div class="input">
+                    <input data-aos="fade-right" type="text" name="name" placeholder="Your Full Name..." class="box" required>
+                    <input data-aos="fade-left" type="email" name="email" placeholder="Your Email..." class="box" required>
+                    <input data-aos="fade-up" type="number" name="number" placeholder="Your Phone Number..." class="box" required>
+                </div>
+                <div class="my-message">
+                    <textarea data-aos="fade-up" name="message" class="box" required placeholder="Message" cols="30" rows="10"></textarea>
+                </div>
                 <br>
-                <hr class="hr">
+                <input type="submit" data-aos="zoom-in" value="send message" name="send" class="btnSend">
             </div>
-            <br>
-            <div class="contact-form">
-                <div class="input-class">
-                    <input type="text" class="input" placeholder="Your Name" required>
-                    <input type="email" class="input" placeholder="Your E-mail" required>
-                    <input type="tel" class="input" placeholder="Phone" required>
-                </div>
-                <div class="message">
-                    <textarea placeholder="Message" cols="30" rows="10"></textarea>
-                    <button class="btn send" type="submit">Send</button>
-                </div>
-            </div>
-        </div>
+        </form> 
     </section>
+
 
     <footer>
         <div class="socials">
