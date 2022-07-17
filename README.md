@@ -1,4 +1,4 @@
-### Hi there 👋
+### Hi, this is my personal portfolio👋
 
 <!--
 **bleronamaxhuni/BleronaMaxhuni** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
